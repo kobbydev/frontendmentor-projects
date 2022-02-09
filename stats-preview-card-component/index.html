@@ -15,59 +15,120 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
     * { margin: 0; padding: 0; box-sizing: border-box;}
-    .container {background-color: hsl(233, 47%, 7%); margin-top: 10%; margin-bottom: 5%; margin-left: 200px; margin-right: 200px; padding: 10%; padding-right: 5%; height: 80%;}
-    .card1 {  background-color: hsl(244, 38%, 16%); padding: 100px;  font-family: Inter; width: 45%; border-top-left-radius: 5px; border-bottom-left-radius: 5px; float: left;}
-    .card2 {  width: 45%; background-color: hsl(277, 65%, 41%); border-bottom-right-radius: 5px; border-top-right-radius: 5px; float: right;}
-    .row {display: flex; flex-wrap: wrap;}
-    table {width: 100%;}
-    th , td {text-align: start;}
-    body {Font-size: 15px}
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.6;
+    .container {
+      max-width: 1440px;
+      height: 700px;
+      margin: 100px 100px;
+      padding: 60px 100px;
+      display: flex;
+      align-items: center;
+      background: hsl(233, 47%, 7%);
+      color: white;
+      font-size: 15px;
     }
-    @media screen and (max-width: 800px) {
-      .card2 { width: 100%;}
-      .card1 {
+    .card{
+      height: 80%;
+      max-width: 50%;
+    }
+    .card:nth-of-type(1) {
+      background: hsl(244, 38%, 16%);
+      padding: 80px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    .card:nth-of-type(2){
+      background: hsl(277, 64%, 61%);
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    img{
+      max-width: 100%;
+      height: 100%;
+      opacity: 0.5;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    .section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .main h1 {
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-family: Inter;
+    }
+    .main p {
+      margin-bottom: 90px;
+      font-weight: 400;
+      font-family: Lexend Deca;
+      color: hsla(0, 0%, 100%, 0.75);
+    }
+    .box h2 {
+      color: hsl(0, 0%, 100%); font-family: Inter; font-weight: 700; margin-bottom: 10px;
+    }
+    .box p {
+      color: hsla(0, 0%, 100%, 0.6);font-family: 'Lexend Deca' ; font-weight: 400;
+    }
+    @media (max-width: 1200px) {
+      .container {
+        flex-direction: column;
+        max-width: 375px;
+        padding: 40px 20px;
+      }
+      .card:nth-of-type(1){
+        order: 2;
+        padding: 10px;
+        height: 70%;
+        width: 335px;
+        justify-content: center;
+        align-items: center;
+      }
+      .card:nth-of-type(2){
+        order: 1;
+        height: 30%;
+        width: 335px;
+      }
+      .card{
+        max-width: 100%;
+        height: 80%;
+      }
+      img {
         width: 100%;
       }
-      .container {width: 100%;}
+      .section {
+        flex-direction: column;
+        justify-content: center;
+      }
     }
-    
+
   </style>
 </head>
 <body>
+ 
   <div class="container">
-    <div class="row">
-      <div class="card1">
-      <h1 style="color: hsl(0, 0%, 100%); font-weight: 700; font-size: xx-large;">Get <span style="color: hsl(277, 64%, 61%);;">insights</span>  that help your business grow.</h1>
-      <br>
-                  <p><h5 style="color: hsla(0, 0%, 100%, 0.75); font-family: 'Lexend Deca'; font-weight: 400; font-size: small;">Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-                  experience, and overall efficiency.</h5></p>
-                  <br>
-                  <br>
-                  <br>
-                  <table>
-                    <tr style="color: hsl(0, 0%, 100%); font-weight: 400; font-size: large;">
-                      <th>10k+</th>
-                      <th>314</th>
-                      <th>12M+</th>
-                    </tr>
-                    <tr style="color: hsla(0, 0%, 100%, 0.6);font-family: 'Lexend Deca' ; font-weight: 400; font-size: x-small;">
-                      <td>COMPANIES</td>
-                      <td>TEMPLATES</td>
-                      <td>QUERIES</td>
-                    </tr>
-                  </table>
+    <div class="card">
+      <div class="main">
+        <h1>Get <span style="color: hsl(277, 64%, 61%);">insights</span>  that help your business grow.</h1>
+        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
       </div>
-      <div class="card2">
-        <img src="./images/image-header-desktop.jpg" alt="">
+      <div class="section">
+        <div class="box">
+          <h2>10k+</h2>
+          <p>COMPANIES</p>
+        </div>
+        <div class="box">
+          <h2>314</h2>
+          <p>TEMPLATES</p>
+        </div>
+        <div class="box">
+          <h2>12M+</h2>
+          <p>QUERIES</p>
+        </div>
       </div>
     </div>
+    <div class="card"><img src="./images/image-header-desktop.jpg" alt=""></div>
   </div>
-
     
 
   <div class="attribution">
